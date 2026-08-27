@@ -17,6 +17,7 @@ body{
 
 header{
     grid-area: header;
+    background-color: antiquewhite;
 }
 
 aside{
@@ -30,16 +31,25 @@ main{
 .navbar{
     display: flex;
     padding: 16px;
-    background-color: antiquewhite;
     justify-content: space-between;
 }
 
 .navbar .searchbar{
     display: flex;
+    flex: 1;              /* grow to take up all remaining space */
+    max-width: 600px;     /* optional: stop it from getting TOO wide on big screens */
+    margin: 0 20px;
+}
+
+.searchbar input{
+    flex: 1;               /* make the input itself stretch inside searchbar */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px 0 0 10px;
 }
 
 .searchbar button{
-    border-radius: 0px;
+    border-radius: 0 10px 10px 0;
 }
 
 .logo, button{
@@ -54,16 +64,90 @@ button:hover{
     cursor: pointer;
 }
 
+.profile{
+    display: inline-block;
+}
+
 .sidebar{
     display: flex;
     flex-direction: column;
-    margin-top: -30px;
     gap: 30px;
     background-color: antiquewhite;
     padding-left: 20px;
     padding-top: 60px;
 }
 
+.sidebar a{
+    color: black;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+.maincard{
+    display: grid;
+    min-height: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px 1fr 1fr;
+    grid-template-areas: "greet greet greet" "card card card" "prog prog plans";
+    padding: 20px;
+    gap: 20px;
+}
+
+.greeting{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: greet;
+    border: 2px solid rgb(217, 214, 214);
+    box-shadow: -5px 5px 15px 0px rgba(203, 201, 201, 0.75);
+    border-radius: 5px;
+}
+
+.cards{
+    grid-area: card;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(243, 245, 247);
+    padding: 40px;
+    border: 2px solid rgb(217, 214, 214);
+    box-shadow: -5px 5px 15px 0px rgba(203, 201, 201, 0.75);
+    border-radius: 5px;
+}
+
+.learn{
+    grid-area: prog;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid rgb(217, 214, 214);
+    box-shadow: -1px 0px 15px 0px rgba(203, 201, 201, 0.75);
+    border-radius: 5px;
+}
+
+.title{
+    justify-self: flex-start;
+}
+
+.upcoming{
+    grid-area: plans;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid rgb(217, 214, 214);
+    box-shadow: -1px 0px 15px 0px rgba(203, 201, 201, 0.75);
+    border-radius: 5px;
+    padding: 10px;
+}
 
 
 
