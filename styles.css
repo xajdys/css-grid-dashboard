@@ -42,7 +42,7 @@ main{
     border-radius: 0px;
 }
 
-.logo, button, .sidebar a{
+.logo, button{
     color: black;
     font-weight: bolder;
     background-color: rgb(254, 246, 235);
@@ -57,9 +57,13 @@ button:hover{
 .sidebar{
     display: flex;
     flex-direction: column;
+    margin-top: -30px;
     gap: 30px;
-    margin-left: 20px;
+    background-color: antiquewhite;
+    padding-left: 20px;
+    padding-top: 60px;
 }
+
 
 
 
