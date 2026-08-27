@@ -42,7 +42,7 @@ main{
     border-radius: 0px;
 }
 
-.logo, button{
+.logo, button, .sidebar a{
     color: black;
     font-weight: bolder;
     background-color: rgb(254, 246, 235);
