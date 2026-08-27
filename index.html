@@ -1,12 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard using CSS</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    
+    <header class="navbar">
+        <nav>
+            <a href="index.html" class="logo"> DevTrack </a>
+
+            <span><input type="text" placeholder="Search..."><button type="button">🔍</button></span>
+
+            <button type="button"> 🔔 <span class="badge">3</span></button>
+
+            <button type="button" class="profile"> 👤 Xai </button>
+        </nav>
+    </header>
+
+    <main class="mainboard">
+        <aside class="sidebar">
+            <a href="#"> 🏠 Dashboard </a>
+            <a href="#"> 📚 Learning </a>
+            <a href="#"> 💻 Projects </a>
+            <a href="#"> 📝 Notes </a>
+            <a href="#"> ⚙️ Settings </a>
+        </aside>
+
+        <div class="maincard">
+            <div class="greeting">
+                <p> Good day, Developer 👋 </p>
+                <p> Here's your learning progress. </p>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <p>Courses 12</p>
+                </div>
+                <div class="card"> Projects 4 </div>
+                <div class="card"> GitHub 18 </div>
+            </div>
+
+            <div class="learn">
+                <p>Learning Progress</p>
+                <div class="course"> HTML ✅ </div>
+                <div class="course"> CSS ✅ </div>
+                <div class="course"> JavaScript 35% </div>
+            </div>
+
+            <div class="upcoming">
+                <p> This Week </p>
+                <div> CSS Grid 5 lessons completed!</div>
+            </div>
+        </div>
+    </main>
 </body>
+
 </html>
